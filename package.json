@@ -7,6 +7,7 @@
   "scripts": {
     "dev": "tsx watch src/index.ts",
     "start": "tsx src/index.ts",
+    "build": "tsc",
     "seed": "tsx scripts/seed-markets.ts",
     "setup-treasury": "tsx scripts/setup-treasury.ts",
     "bot": "tsx scripts/run-bot.ts",
@@ -29,5 +30,8 @@
     "@types/ws": "^8.5.0",
     "tsx": "^4.19.0",
     "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": "22.x"
   }
 }
