@@ -1,0 +1,22 @@
+import 'dotenv/config';
+export declare const config: {
+    readonly masterKey: string;
+    readonly feeRate: number;
+    readonly treasuryAddress: string;
+    readonly treasuryPrivateKey: string;
+    readonly baseRpcUrl: string;
+    readonly cdpApiKey: string;
+    readonly apiPort: number;
+    readonly dashboardPort: number;
+    readonly polySyncInterval: number;
+    readonly polyResolutionInterval: number;
+    readonly polyGammaApi: "https://gamma-api.polymarket.com";
+    readonly polyClobApi: "https://clob.polymarket.com";
+    readonly polyClobWs: "wss://ws-subscriptions-clob.polymarket.com/ws/market";
+    readonly baseUsdcAddress: "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913";
+    readonly x402FacilitatorUrl: "https://x402.org/facilitator";
+    readonly devMode: boolean;
+    readonly adminToken: string;
+    readonly domain: string;
+    readonly defaultBotBalance: number;
+};

@@ -1,0 +1,33 @@
+{
+  "name": "clawmarket",
+  "version": "0.1.0",
+  "description": "ClawMarket — Prediction marketplace for OpenClaw bots powered by x402",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "seed": "tsx scripts/seed-markets.ts",
+    "setup-treasury": "tsx scripts/setup-treasury.ts",
+    "bot": "tsx scripts/run-bot.ts",
+    "bot:dry": "tsx scripts/run-bot.ts --dry"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.0.0",
+    "dotenv": "^16.4.0",
+    "ethers": "^6.13.0",
+    "eventemitter3": "^5.0.0",
+    "express": "^4.21.0",
+    "uuid": "^10.0.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.0",
+    "@types/express": "^4.17.21",
+    "@types/node": "^22.0.0",
+    "@types/uuid": "^10.0.0",
+    "@types/ws": "^8.5.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  }
+}
