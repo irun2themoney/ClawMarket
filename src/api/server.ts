@@ -11,7 +11,7 @@ import { walletRouter } from './routes/wallet.js';
 import { leaderboardRouter } from './routes/leaderboard.js';
 import { adminRouter } from './routes/admin.js';
 import { ammRouter } from './routes/amm.js';
-const botsRouter = require("./routes/bots"); // New import
+import botsRouter from "./routes/bots";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
