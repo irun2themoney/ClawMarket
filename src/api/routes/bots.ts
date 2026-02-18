@@ -3,11 +3,19 @@ const router = express.Router();
 import { getDb } from "../../db";
 
 // Fetch bot data
+interface Bot {
+    id: number;
+    name: string;
+    balance: number;
+    status: string;
+    strategy: string;
+}
+
 router.get("/:botId", async (req: Request, res: Response) => {
     const { botId } = req.params;
 
     try {
-        const bot = await getDb().prepare(`SELECT * FROM bots WHERE id = ?`).get(botId);
+        const bot: Bot = getDb().prepare(`SELECT * FROM bots WHERE id = ?`).get(botId);
 
         if (!bot) {
             return res.status(404).json({ error: "Bot not found" });
