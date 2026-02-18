@@ -7,7 +7,7 @@ router.get("/:botId", async (req: Request, res: Response) => {
     const { botId } = req.params;
 
     try {
-        const bot = await db.get(`SELECT * FROM bots WHERE id = ?`, botId);
+        const bot = await getDb().prepare(`SELECT * FROM bots WHERE id = ?`).get(botId);
 
         if (!bot) {
             return res.status(404).json({ error: "Bot not found" });
