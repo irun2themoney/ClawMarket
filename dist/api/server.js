@@ -36,7 +36,9 @@ export function createServer() {
     // API Routes
     app.use('/api/markets', marketsRouter);
     app.use('/api/orders', ordersRouter);
-    app.use('/api/bots', portfolioRouter);
+    import botsRouter from './routes/bots.js';
+
+    app.use('/api/bots', botsRouter);
     app.use('/api/wallet', walletRouter);
     app.use('/api/bots', walletRouter); // Also mount register under /api/bots/register
     app.use('/api/leaderboard', leaderboardRouter);
