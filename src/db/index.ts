@@ -31,3 +31,9 @@ export function closeDb(): void {
     _db = null;
   }
 }
+
+// Add a default export for the db methods
+export default {
+  getDb,
+  closeDb
+};

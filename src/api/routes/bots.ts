@@ -1,6 +1,6 @@
 import express, { Request, Response } from "express";
 const router = express.Router();
-import db from "../../db";
+import { getDb } from "../../db";
 
 // Fetch bot data
 router.get("/:botId", async (req: Request, res: Response) => {
