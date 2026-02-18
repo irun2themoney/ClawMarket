@@ -1,9 +1,9 @@
-const express = require("express");
+import express, { Request, Response } from "express";
 const router = express.Router();
 const db = require("../../db");
 
 // Fetch bot data
-router.get("/:botId", async (req, res) => {
+router.get("/:botId", async (req: Request, res: Response) => {
     const { botId } = req.params;
 
     try {
@@ -26,4 +26,4 @@ router.get("/:botId", async (req, res) => {
     }
 });
 
-module.exports = router;
+export default router;
